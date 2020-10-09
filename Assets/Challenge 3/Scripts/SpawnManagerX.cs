@@ -19,14 +19,14 @@ public class SpawnManagerX : MonoBehaviour
     }
 
     // Spawn obstacles
-    void SpawnObjects ()
+    void SpawnObjects()
     {
         // Set random spawn location and random object index
         Vector3 spawnLocation = new Vector3(5, Random.Range(5, 15), 0);
         int index = Random.Range(0, objectPrefabs.Length);
 
         // If game is still active, spawn new object
-        if (!playerControllerScript.gameOver == false)
+        if (playerControllerScript.gameOver == false)
         {
             Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
         }

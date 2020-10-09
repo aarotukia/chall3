@@ -40,15 +40,7 @@ public class PlayerControllerX : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
-    /* 
-     *
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
-        {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;        
-        }
-
-     */
+    
     private void OnCollisionEnter(Collision other)
     {
         // if player collides with bomb, explode and set gameOver to true
